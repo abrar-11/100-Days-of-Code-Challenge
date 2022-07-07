@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <title>Nodejs Login and Registration JWT</title>
+   </head>
+   <body>
+      <section class="forms-section">
+         <h1 class="section-title">Welcome to Nodejs Express Form</h1>
+         <div class="forms">
+            <div class="form-wrapper is-active">
+               <button type="button" class="switcher switcher-login">
+                  Login
+                  <span class="underline"></span>
+               </button>
+               <form class="form form-login" id="login-form">
+                  <fieldset>
+                     <legend>
+                        Please, enter your email and password for login.
+                     </legend>
+                     <div class="input-block">
+                        <label for="login-email">Username</label>
+                        <input
+                           id="login-username"
+                           type="text"
+                           required
+                        />
+                     </div>
+                     <div class="input-block">
+                        <label for="login-password">Password</label>
+                        <input
+                           id="login-password"
+                           type="password"
+                           required
+                           id="login-password"
+                        />
+                     </div>
+                  </fieldset>
+                  <button type="submit" class="btn-login">Login</button>
+                  <a href="/update-password.html">Update Password</a>
+               </form>
+            </div>
+            <div class="form-wrapper">
+               <button type="button" class="switcher switcher-signup">
+                  Sign Up
+                  <span class="underline"></span>
+               </button>
+               <form class="form form-signup" id="signup-form">
+                  <fieldset>
+                     <legend>
+                        Please, enter your email, password and password
+                        confirmation for sign up.
+                     </legend>
+                     <div class="input-block">
+                        <label for="signup-email">E-mail</label>
+                        <input
+                           id="signup-email"
+                           type="email"
+                           required
+                           id="signup-email"
+                        />
+                     </div>
+                     <div class="input-block">
+                        <label for="signup-username">Username</label>
+                        <input
+                           id="signup-username"
+                           type="text"
+                           required
+               
+                        />
+                     </div>
+                     <div class="input-block">
+                        <label for="signup-password">Password</label>
+                        <input
+                           id="signup-password"
+                           type="password"
+                           required
+                           id="signup-password"
+                        />
+                     </div>
+                     <div class="input-block">
+                        <label for="signup-password-confirm"
+                           >Confirm password</label
+                        >
+                        <input
+                           id="signup-password-confirm"
+                           type="password"
+                           required
+                        />
+                     </div>
+                  </fieldset>
+                  <button type="submit" class="btn-signup">Continue</button>
+               </form>
+            </div>
+         </div>
+      </section>
+
+
+    
+
+      <script>
+         const switchers = [...document.querySelectorAll(".switcher")];
+
+         switchers.forEach((item) => {
+            item.addEventListener("click", function () {
+               switchers.forEach((item) =>
+                  item.parentElement.classList.remove("is-active")
+               );
+               this.parentElement.classList.add("is-active");
+            });
+         });
+
+         //  Handling Forms
+
+         const login_form = document.getElementById("login-form");
+         login_form.addEventListener("submit",async (event) => {
+            event.preventDefault();
+            const username = document.getElementById("login-username").value;
+            const password = document.getElementById("login-password").value;
+
+            // console.log(username, password);
+
+            const result =await fetch('/api/login',{
+                method: 'POST',
+                headers:{
+                    'content-type': 'application/json',
+                },
+                body:JSON.stringify({
+                    username:username,
+                    password:password,
+                })
+            }).then((res)=>res.json())
+
+
+            if(result.status = 'success'){
+               localStorage.setItem('token',result.data)
+               console.log(result)
+            }
+
+         });
+
+         const signup_form = document.getElementById("signup-form");
+         signup_form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const email = document.getElementById("signup-email").value;
+            const username = document.getElementById("signup-username").value;
+            const password = document.getElementById("signup-password").value;
+            const password_confirm = document.getElementById("signup-password-confirm").value;
+
+            // console.log(email, password,password_confirm);
+
+            
+           const result =await fetch('/api/register',{
+                method: 'POST',
+                headers:{
+                    'content-type': 'application/json',
+                },
+                body:JSON.stringify({
+                    email:email,
+                    username:username,
+                    password:password,
+                })
+            }).then((res)=>res.json())
+
+
+            console.log(result)
+
+
+         });
+
+
+
+
+      </script>
+   </body>
+</html>
