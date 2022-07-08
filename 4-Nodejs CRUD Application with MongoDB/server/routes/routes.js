@@ -5,10 +5,6 @@ const services = require("../services/render")
 // Page Route
 router.get("/", services.home);
 
-// Create User Page Route
-router.get("/add-employee", services.createEmployee);
-
-
 
 // ==========Api Routes==========
 
@@ -16,10 +12,11 @@ router.get("/add-employee", services.createEmployee);
 router.post("/api/employee", controllers.registerEmployee);
 
 // View Employees
-// router.post("/api/users", controllers.);
+router.get("/api/getemployee", controllers.getEmployees);
 
 // Updtae Employees
-// router.post("/update-employee", controllers.updateEmployee);
+router.put("/api/update/:id", controllers.updateEmployee);
+
 
 
 

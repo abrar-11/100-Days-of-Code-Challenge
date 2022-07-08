@@ -1,16 +1,18 @@
 // Home Page Route
+const axios = require("axios");
 
-const home = async(req,res)=>{
-    res.render('index')
-}
+const home = async (req, res) => {
+   axios
+      .get("http://localhost:5000/api/getemployee")
+      .then((response) => {
+         return res.render("index", { employee: response.data.data });
+      })
+      .catch((err) =>{
+        console.log("error: ", err);
+        res.render("index", { employee: [] })
+      });
+};
 
-// add Employee Route
-
-const createEmployee = async(req,res)=>{
-    res.render('index')
-}
-
-
-module.exports = {home,createEmployee}
+module.exports = { home };
 
 // Update Employee Route

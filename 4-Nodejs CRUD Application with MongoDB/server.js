@@ -14,6 +14,7 @@ const connectDB = require("./server/database/db");
 
 // Parse incoming request with urlencoded payload
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
 
 // Adding Css
 app.use("/css", express.static(path.join(__dirname, "assets/css")));
