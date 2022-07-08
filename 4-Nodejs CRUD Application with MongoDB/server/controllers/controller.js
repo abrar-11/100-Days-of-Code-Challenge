@@ -1,5 +1,11 @@
 const Employee = require("../models/Employee");
 
+
+// =======================================================
+//      =====Create Employee Controller================
+// =======================================================
+
+
 const registerEmployee = async (req, res) => {
    console.log(req.body);
    try {
@@ -46,6 +52,10 @@ const registerEmployee = async (req, res) => {
    }
 };
 
+// =======================================================
+// =====Get Employees Details Controller================
+// =======================================================
+
 const getEmployees = async (req, res) => {
    try {
       if (req.query.id) {
@@ -70,8 +80,13 @@ const getEmployees = async (req, res) => {
    }
 };
 
+
+// =======================================================
+// =====Update Employee Details Controller================
+// =======================================================
+
 const updateEmployee = async (req, res) => {
-   console.log(req.body);
+   // console.log(req.body);
    try {
       if (req.params.id) {
          const id = req.params.id;
@@ -119,4 +134,45 @@ const updateEmployee = async (req, res) => {
    }
 };
 
-module.exports = { registerEmployee, getEmployees, updateEmployee };
+
+
+// =======================================================
+// =====Delete Employees Details Controller================
+// =======================================================
+
+const deleteEmployee = async (req, res) => {
+   // console.log("Im hitted");
+   try {
+      if (req.params.id) {
+         const id = req.params.id;
+         const deleted = await Employee.findByIdAndDelete(id)
+
+         if (deleted) {
+            // console.log("deleted");
+            return res.status(200).json({ status: "success" ,msg: "Deleted Employee Successfully"});
+         } 
+         else {
+            // console.log("not deleted");
+            res.status(500).json({
+               status: "error",
+               error: "No Employee Found! ID is invalid",
+            });
+         }
+      }
+      else{
+         // console.log("not deleted");
+         res.status(500).json({
+            status: "error",
+            error: "PLease Provide ID ",
+         });
+      }
+   } catch (err) {
+      // console.log("Catch deleted");
+      res.status(500).json({ status: "error", error: err.message });
+   }
+};
+
+
+
+
+module.exports = { registerEmployee, getEmployees, updateEmployee ,deleteEmployee};

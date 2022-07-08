@@ -19,6 +19,9 @@ app.use(express.json())
 // Adding Css
 app.use("/css", express.static(path.join(__dirname, "assets/css")));
 
+// Adding javascript
+app.use("/js", express.static(path.join(__dirname, "assets/js")));
+
 // Ejs Engine
 app.set("view engine", "ejs");
 

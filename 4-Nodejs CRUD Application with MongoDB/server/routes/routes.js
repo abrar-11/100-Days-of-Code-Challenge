@@ -14,11 +14,12 @@ router.post("/api/employee", controllers.registerEmployee);
 // View Employees
 router.get("/api/getemployee", controllers.getEmployees);
 
-// Updtae Employees
+// Update Employee
 router.put("/api/update/:id", controllers.updateEmployee);
 
 
-
+// Delete Employee
+router.delete("/api/delete/:id", controllers.deleteEmployee);
 
 
 
