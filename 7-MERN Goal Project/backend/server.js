@@ -1,23 +1,27 @@
+const express = require("express");
+const dotenv = require("dotenv").config();
+const app = express();
+const { errorHandler } = require("./middleware/error");
+const colors = require("colors");
+const connectDB = require("./config/database");
 
-const express = require('express')
-const dotenv = require('dotenv').config()
-const port = process.env.PORT ||5000
-const {errorHandler} = require('./middleware/error');
-const goalRoutes = require('./routes/goalRoutes')
-const colors = require('colors')
-const app = express()
+// ======Importing Routes======
+const goalRoutes = require("./routes/goalRoutes");
+const userRoutes = require("./routes/userRoutes");
 
+const port = process.env.PORT || 5000;
 
-const connectDB = require('./config/database')
-connectDB()
-app.use(express.json())
-app.use(express.urlencoded({extended:true}))
+// ======Connecting to MongoDB======
+connectDB();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Error MiddleWare
-app.use(errorHandler)
+app.use(errorHandler);
 
-app.use('/api/goals',goalRoutes)
+app.use("/api/goals", goalRoutes);
 
-app.listen(port,()=>console.log(`server is listening on port ${port}`))
+app.use("/api/user", userRoutes);
 
-
+app.listen(port, () => console.log(`server is listening on port ${port}`));
