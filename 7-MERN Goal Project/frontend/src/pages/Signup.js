@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { registerUser, resetAll } from "../features/authSlice";
 
 const Signup = () => {
+   const { isLoading, isError, message, isSuccess ,user} = useSelector(
+      (state) => state.auth
+   );
+   const dispatch = useDispatch();
+   const navigate = useNavigate();
 
-   const [passwordNotMatched, setPasswordNotMatched] = useState(false)
+   useEffect(() => {
+     if(isError) {
+      toast.error(message)
+     }
+
+     if(isSuccess || user){
+      toast.info("Registered Successfully")
+
+         setTimeout(() => {
+            navigate('/')
+         },1000)
+     }
+   }, [user,isError,isSuccess,message])
+   
+
+   const [passwordNotMatched, setPasswordNotMatched] = useState(false);
    const [form, setform] = useState({
       full_name: "",
       email: "",
@@ -12,22 +35,32 @@ const Signup = () => {
       confirm_password: "",
    });
 
-   const {full_name, email, password, confirm_password}  = form
-   const updateValue = (e)=>{
-      setform((prevState)=>({
+
+
+   const { full_name, email, password, confirm_password } = form;
+   const updateValue = (e) => {
+      setform((prevState) => ({
          ...prevState,
-         [e.target.name] : e.target.value,
-      }))
-   }
+         [e.target.name]: e.target.value,
+      }));
+   };
 
+   const formSubmit = (e) => {
+      e.preventDefault();
 
-   const formSubmit = (e)=>{
-      e.preventDefault()
-
-     password !== confirm_password?setPasswordNotMatched(true):setPasswordNotMatched(false)
-      
- 
-   }
+      if (password !== confirm_password) {
+         setPasswordNotMatched(true);
+      } else {
+         setPasswordNotMatched(false);
+         dispatch(
+            registerUser({
+               name: full_name,
+               email,
+               password,
+            })
+         );
+      }
+   };
    return (
       <div className="bg-gray-900 w-screen h-screen">
          <div className="container flex items-center justify-center w-10/12 mx-auto h-full">
@@ -122,14 +155,19 @@ const Signup = () => {
                      placeholder="******************"
                      autocomplete="off"
                   />
-                  {passwordNotMatched && ( <p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span>Password Not Matched!</p>)}
+                  {passwordNotMatched && (
+                     <p class="mt-2 text-sm text-red-600 dark:text-red-500">
+                        <span class="font-medium">Oops!</span> Password Not
+                        Matched!
+                     </p>
+                  )}
                </div>
 
                <div class="flex items-center justify-between">
                   <button
                      class="bg-sky-500 hover:bg-sky-700 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                      type="submit"
-                     onClick={(e)=>formSubmit(e)}
+                     onClick={(e) => formSubmit(e)}
                   >
                      Sign In
                   </button>

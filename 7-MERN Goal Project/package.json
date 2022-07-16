@@ -1,6 +1,7 @@
 {
   "name": "7-mern-goal-project",
   "version": "1.0.0",
+  "proxy": "http://localhost:5000",
   "description": "",
   "main": "index.js",
   "scripts": {
