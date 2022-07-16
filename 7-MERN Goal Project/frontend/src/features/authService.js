@@ -1,5 +1,5 @@
 import axios from 'axios'
-const api_url = '/api/users/' 
+const api_url = '/api/user/' 
 
 
 const register = async(userData)=>{
@@ -7,7 +7,7 @@ const register = async(userData)=>{
 
     console.log("Register User response: ",response)
     if(response.data){
-        localStorage.setItem('user',JSON.stringify('response.data'))
+        localStorage.setItem('user',JSON.stringify(response.data))
     }
 
     return response.data

@@ -14,8 +14,12 @@ const port = process.env.PORT || 5000;
 // ======Connecting to MongoDB======
 connectDB();
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
+
 
 // Error MiddleWare
 app.use(errorHandler);

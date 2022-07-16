@@ -1,7 +1,15 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+   const dispatch = useDispatch();
+   const { user } = useSelector((state) => state.auth);
+
+   // Log out 
+   const logOut = ()=>{
+      localStorage.removeItem('user');
+   }
    return (
       <div className="bg-gray-900 fixed top-0 text-gray-100 font-light w-screen">
          <div className="container w-10/12 mx-auto  py-5 flex items-center justify-between">
@@ -24,8 +32,15 @@ const Header = () => {
             </div>
 
             <div className="auth space-x-3">
-                <Link to="/" >Login </Link>
-                <Link to="/signup" >Signup</Link>
+               {!user ? (
+                  <>
+                     <Link to="/">Login </Link>
+
+                     <Link to="/signup">Signup</Link>
+                  </>
+               ) : (
+                  <button onClick={logOut}>Log out</button>
+               )}
             </div>
          </div>
       </div>
