@@ -38,6 +38,8 @@ const Signup = () => {
 
 
    const { full_name, email, password, confirm_password } = form;
+
+   
    const updateValue = (e) => {
       setform((prevState) => ({
          ...prevState,

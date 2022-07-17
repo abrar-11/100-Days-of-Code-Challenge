@@ -9,10 +9,9 @@ const authProtection = asyncHandler(async (req, res, next) => {
    ) {
       try {
          token = req.headers.authorization.split(" ")[1];
-         console.log(token);
+         // console.log(token);
          // verifing User token
          const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
-         console.log("decpded", decoded);
          // Get user details and setting it as req.user except user password
          req.user = await User.findById(decoded.id).select("-password");
 
