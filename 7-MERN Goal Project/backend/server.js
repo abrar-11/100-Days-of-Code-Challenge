@@ -21,11 +21,13 @@ app.use(express.urlencoded({ extended: true }));
 
 
 
-// Error MiddleWare
-app.use(errorHandler);
 
 app.use("/api/goals", goalRoutes);
 
 app.use("/api/user", userRoutes);
+
+
+// Error MiddleWare
+app.use(errorHandler);
 
 app.listen(port, () => console.log(`server is listening on port ${port}`));

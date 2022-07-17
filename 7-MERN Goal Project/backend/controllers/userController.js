@@ -51,6 +51,12 @@ const loginUser = asyncHandler(async (req, res) => {
    }
 
    const user = await User.findOne({ email });
+
+   if (!user) {
+      res.status(400);
+      throw new Error("Invalid Email");
+   }
+
    const isPasswordMatch = await bcrypt.compare(password, user.password);
 
    if (user && isPasswordMatch) {

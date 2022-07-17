@@ -7,22 +7,27 @@ import Signup from "./pages/Signup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Dashboard from "./pages/Dashboard";
+import { useSelector } from "react-redux";
 
 const App = () => {
+
+   const { user } = useSelector((state) => state.auth);
+
+
    return (
       <>
          <Router>
             <Header />
             <Routes>
-               <Route path="/" element={<Login />} />
-               <Route path="/signup" element={<Signup />} />
-               <Route path="/" element={<Dashboard />} />
+               <Route path="/login" element={user?<Dashboard />:<Login />} />
+               <Route path="/signup" element={user?<Dashboard />:<Signup />} />
+               <Route path="/" element={user?<Dashboard />:<Login/>} />
             </Routes>
          </Router>
 
          <ToastContainer
-            position="top-center"
-            autoClose={5000}
+            position="top-right"
+            autoClose={3000}
             hideProgressBar={false}
             newestOnTop={false}
             closeOnClick
@@ -30,6 +35,7 @@ const App = () => {
             pauseOnFocusLoss
             draggable
             pauseOnHover
+            theme="dark"
          />
       </>
    );
