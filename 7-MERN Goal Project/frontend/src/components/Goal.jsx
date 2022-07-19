@@ -1,11 +1,10 @@
 import React from "react";
 
-const Goal = ({data}) => {
-    // console.log(data)
-    const {_id,goal,createdAt} = data
+const Goal = ({ data, setgoalId }) => {
+   const { _id, goal, createdAt } = data;
    return (
       <div className=" w-full md:w-5/12 text-md shadow-lg hover:shadow-xl p-4    bg-gray-800 rounded relative">
-         <div className="absolute right-3 top-3">
+         <div className="absolute right-3 top-3" onClick={()=>setgoalId(_id)}>
             <svg
                className="w-4 h-4 text-emerald-300 cursor-pointer  hover:animate-pulse"
                fill="currentColor"
@@ -19,9 +18,7 @@ const Goal = ({data}) => {
                />
             </svg>
          </div>
-         <p className="text-emerald-200 font-light">
-            {goal}
-         </p>
+         <p className="text-emerald-200 font-light">{goal}</p>
          <p className="text-gray-300 text-sm">{createdAt}</p>
       </div>
    );
