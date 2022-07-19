@@ -14,7 +14,6 @@ const Dashboard = () => {
    const [goalId, setgoalId] = useState(null);
 
    useEffect(() => {
-      console.log("im running");
       dispatch(getAllGoals());
    },[])
 
@@ -42,15 +41,15 @@ const Dashboard = () => {
       <div className="bg-gray-900 max-w-screen min-h-screen text-white pt-28 ">
          <div className="container w-10/12 mx-auto ">
 
-            <div class={`bg-gray-900 bg-opacity-70 ${goalId? 'flex':'hidden'} justify-center items-center absolute z-50 top-0 right-0 bottom-0 left-0`} >
-               <div class="bg-gray-900  px-16 py-14 rounded-md text-center shadow-lg" >
-                  <h1 class="text-md mb-4 font-normal text-gray-200">
+            <div className={`bg-gray-900 bg-opacity-70 ${goalId? 'flex':'hidden'} justify-center items-center absolute z-50 top-0 right-0 bottom-0 left-0`} >
+               <div className="bg-gray-900  px-16 py-14 rounded-md text-center shadow-lg" >
+                  <h1 className="text-md mb-4 font-normal text-gray-200">
                      Do you Want to Delete this goal?
                   </h1>
-                  <button class="bg-emerald-500 px-4 py-2 rounded-md text-sm text-white" onClick={()=>setgoalId(null)}>
+                  <button className="bg-emerald-500 px-4 py-2 rounded-md text-sm text-white" onClick={()=>setgoalId(null)}>
                      Cancle
                   </button>
-                  <button class="bg-red-500 px-7 py-2 ml-2 rounded-md text-sm text-white font-normal" onClick={
+                  <button className="bg-red-500 px-7 py-2 ml-2 rounded-md text-sm text-white font-normal" onClick={
                      handleDelete
                   }>
                      Ok
@@ -68,10 +67,10 @@ const Dashboard = () => {
             <div className="flex flex-wrap justify-center gap-5  mx-auto">
                {goals.length > 0 ? (
                   goals.map((goal) => {
-                     return <Goal data={goal} setgoalId={setgoalId} />;
+                     return <Goal data={goal} setgoalId={setgoalId} key={goal._id} />;
                   })
                ) : (
-                  <h1>you Dn't have any goal yet..</h1>
+                  <h1>you Don't have any goal yet..</h1>
                )}
             </div>
          </div>

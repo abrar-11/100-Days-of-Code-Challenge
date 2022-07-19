@@ -19,7 +19,7 @@ const Goal = ({ data, setgoalId }) => {
             </svg>
          </div>
          <p className="text-emerald-200 font-light">{goal}</p>
-         <p className="text-gray-300 text-sm">{createdAt}</p>
+         <p className="text-gray-300 text-sm mt-4">{new Date(createdAt).toLocaleString('en-us')}</p>
       </div>
    );
 };

@@ -27,7 +27,7 @@ const GoalForm = () => {
             className="block text-sky-400 text-lg font-medium mb-7"
             htmlFor="full_name"
          >
-            Create Your Goals with Sprint
+            Create Your Goals 
          </label>
          <input
             className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 "
@@ -41,11 +41,11 @@ const GoalForm = () => {
          />
 
          <button
-            class="relative inline-flex w-full   items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 my-5 md:my-7"
+            className="relative inline-flex w-full   items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 my-5 md:my-7"
             type="submit"
             onClick={(e) => formSubmit(e)}
          >
-            <span class="relative px-5 py-2 w-full transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            <span className="relative px-5 py-2 w-full transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                Add Goal
             </span>
          </button>
