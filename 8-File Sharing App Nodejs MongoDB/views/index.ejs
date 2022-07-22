@@ -7,11 +7,18 @@
       <title>Document</title>
    </head>
    <body>
+
+
+      <% if (locals.link !=null) { %>
+            <p>Your File is successfully Uploaded </p>
+            <a href="<%=link%>"><%=link%></a>
+      <% } %>
+
       <form method="post" action="upload" enctype="multipart/form-data">
          <label for="file">File:</label>
          <input type="file" id="file" name="file" required />
          <label for="password">Pasword:</label>
-         <input type="password" id="password" name="password" required />
+         <input type="password" id="password" name="password" />
          <button type="submit">Share</button>
       </form>
    </body>
