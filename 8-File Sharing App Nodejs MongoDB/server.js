@@ -10,6 +10,7 @@ const port = process.env.port || 5000;
 const upload = multer({ dest: "uploads" });
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
 app.set("view engine", "ejs");
 
 // Home Page Route
