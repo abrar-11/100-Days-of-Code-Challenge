@@ -7,7 +7,7 @@ const App = () => {
       <>
          {" "}
          <div className="bg-gradient-to-r min-h-screen pb-60">
-            <div className="container mx-auto w-11/12 max-w-6xl ">
+            <div className="container mx-auto w-9/12 max-w-6xl ">
                {/*=========  Header Section========= */}
                <Header />
 

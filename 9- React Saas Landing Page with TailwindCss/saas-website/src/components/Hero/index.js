@@ -5,7 +5,7 @@ import Employee from "./Employee";
 
 const index = () => {
    return (
-      <div className="py-10 lg:w-9/12 mx-auto ">
+      <div className="py-10 x-auto ">
          {/* Hero Title and Sub title section */}
          <div className="text-center space-y-5 ">
             <h1 className="text-5xl font-semibold text-gray-800">
@@ -18,7 +18,7 @@ const index = () => {
             </p>
 
             <Button />
-            <div className="charts relative pt-6   flex-column sm:flex-row  sm:flex space-y-6 sm:space-y-0 sm:space-x-8 "   >
+            <div className="charts relative pt-6   flex-column lg:flex-row  lg:flex space-y-6 lg:space-y-0 lg:space-x-8 "   >
 
 
                {/* Our Audience Chart */}

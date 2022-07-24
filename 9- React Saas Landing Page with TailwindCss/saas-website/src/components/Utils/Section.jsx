@@ -8,7 +8,7 @@ const Section = () => {
       btn2: "Explore Features",
    };
    return (
-      <div className="w-6/12 space-y-10">
+      <div className="lg:w-5/12 space-y-10">
          <button className="bg-emerald-100 text-emerald-800 px-4 py-2 rounded shadow shadow-emerald-200 ">
             {btn}
          </button>

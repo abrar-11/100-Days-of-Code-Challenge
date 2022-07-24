@@ -50,7 +50,7 @@ const employee_data = [
 
 const Employee = () => {
    return (
-      <div className=" w-full sm:w-6/12  bg-gray-50 p-6 shadow-xl rounded-lg space-y-10 ">
+      <div className=" w-full lg:w-6/12  bg-gray-50 p-6 shadow-xl rounded-lg space-y-10 ">
          <div className="flex justify-between items-center">
             <h1>Employee</h1>
             <button className="shadow-md rounded px-7 py-3 text-xs font-medium bg-emerald-500  text-white uppercase hover:shadow-lg ">

@@ -7,7 +7,7 @@ const Header = () => {
             <img src={logo} alt="" /> <span className="font-bold  text-gray-800">TECHIYON</span>
         </div>
 
-        <div className="space-x-8 flex-grow text-center  text-xs font-medium uppercase text-gray-500">
+        <div className="space-x-8 flex-grow text-center  text-xs font-medium uppercase text-gray-500 hidden lg:block">
             <a href="" className="hover:text-gray-600">Features</a>
             <a href="" className="hover:text-gray-600">Pricing</a>
             <a href="" className="hover:text-gray-600">Watch a demo</a>
