@@ -1,8 +1,9 @@
 import React from "react";
 import pieChart from "../../assets/pie-chart.svg";
 const Audience = () => {
+  // md:-mt-16 md:-ml-5
    return (
-      <div className="w-72 bg-gray-50 p-6 shadow-xl rounded-lg space-y-10 ">
+      <div className="w-full h-fit sm:w-6/12 bg-gray-50 p-6 shadow-xl rounded-lg space-y-10 ">
          <h1>Audience</h1>
          {/* Apex Pie Chart */}
 
