@@ -38,7 +38,7 @@ const Profile = () => {
          </div>
 
          <div className=" md:w-6/12 h-full flex-column justify-evenly space-y-5">
-            <div className="p-4  bg-white shadow-sm md:shadow-md rounded flex items-center">
+            <div className="p-4  bg-white shadow-sm md:shadow-md rounded flex items-center"> 
                <div className="w-14">
                   <LightningBoltIcon className="w-10 h-10 mr-3  text-emerald-500 bg-emerald-100 rounded-full p-2"/>
                </div>

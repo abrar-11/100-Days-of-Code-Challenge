@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero, Partners, Productivity } from "./components";
+import { Hero, Network, Partners, Productivity } from "./components";
 import Header from "./layouts/Header";
 
 const App = () => {
@@ -21,6 +21,9 @@ const App = () => {
                 {/*=========  Productivity Section========= */}
                 <Productivity/>
 
+
+               {/*=========  Network Section========= */}
+                <Network/>
 
             </div>
          </div>
