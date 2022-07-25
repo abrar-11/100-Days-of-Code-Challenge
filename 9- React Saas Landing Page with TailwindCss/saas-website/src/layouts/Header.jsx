@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.svg";
 const Header = () => {
-   const [isNavbar, setisNavbar] = useState(true);
+   const [isNavbar, setisNavbar] = useState(false);
    return (
       <div className="flex items-center justify-between py-5">
          <div className="logo flex items-center space-x-3">
@@ -55,7 +55,7 @@ const Header = () => {
 
          <div
             className={`${
-               !isNavbar ? "-right-full " : "right-0"
+               !isNavbar ? "hidden" : "block"
             } w-screen md:w-80 h-screen bg-gray-100 fixed z-40 top-0 right-0 transition duration-200 ease-out flex justify-center items-center`}
          >
             <div
@@ -79,16 +79,16 @@ const Header = () => {
             </div>
 
             <div className="space-y-8 flex flex-col   text-center  text-xs font-medium uppercase text-gray-500 ">
-               <a href="#hero" className="hover:text-gray-600">
+               <a href="#hero" className="hover:text-gray-600" onClick={()=>setisNavbar(false)}>
                   Grow
                </a>
-               <a href="#productivity" className="hover:text-gray-600">
+               <a href="#productivity" className="hover:text-gray-600"  onClick={()=>setisNavbar(false)}>
                   Productivity
                </a>
-               <a href="#pricing" className="hover:text-gray-600">
+               <a href="#pricing" className="hover:text-gray-600"  onClick={()=>setisNavbar(false)}>
                   Pricing
                </a>
-               <a href="#contact" className="hover:text-gray-600">
+               <a href="#contact" className="hover:text-gray-600"  onClick={()=>setisNavbar(false)}>
                   Contact us
                </a>
 

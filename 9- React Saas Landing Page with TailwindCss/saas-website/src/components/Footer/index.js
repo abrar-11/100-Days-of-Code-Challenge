@@ -3,7 +3,7 @@ import logo from "../../assets/logo.svg";
 const index = () => {
    return (
       <>
-         <footer class="md:py-16 bg-white py-14 dark:bg-gray-900  mt-5">
+         <footer class="md:py-16 bg-white py-14 dark:bg-gray-900  mt-5" id="contact">
             <div className="container mx-auto w-9/12 max-w-6xl">
                <div className="py-28 text-center">
                   <h1 className="w-full text-center text-white text-3xl mb-6  md:text-4xl">

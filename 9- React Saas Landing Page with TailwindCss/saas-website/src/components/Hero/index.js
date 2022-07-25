@@ -8,10 +8,10 @@ const index = () => {
       <div className="py-10 x-auto " id="hero">
          {/* Hero Title and Sub title section */}
          <div className="text-center space-y-5 ">
-            <h1 className="text-3xl lg:text-5xl font-semibold text-gray-800">
-               We Help you to Grow Your BUSINESS
+            <h1 className="text-3xl lg:text-5xl font-semibold text-gray-800  w-full md:w-8/12 mx-auto">
+               We Help you to Grow   Your BUSINESS
             </h1>
-            <p className="text-sm  ">
+            <p className="text-sm   w-full md:w-8/12 mx-auto">
                Yet bed any for travelling assistance indulgence unpleasing. Not
                thoughts all exercise blessing. Indulgence way everything joy
                alteration boisterous the attachment.
