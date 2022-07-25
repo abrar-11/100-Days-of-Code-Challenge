@@ -4,7 +4,7 @@ import BarGraphSection from "./BarGraphSection";
 
 const index = () => {
    return (
-      <div className="py-10  mx-auto   flex justify-center sm:justify-around items-center flex-wrap  overflow-hidden">
+      <div className="py-10  mx-auto   flex justify-center sm:justify-around items-center flex-wrap  overflow-hidden" id="network">
          {/* Boost Your Productivity */}
          <Section
             btn="Boost Your Network"

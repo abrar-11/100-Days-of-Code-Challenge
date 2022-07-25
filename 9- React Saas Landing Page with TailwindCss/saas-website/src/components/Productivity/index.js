@@ -4,7 +4,7 @@ import Profile from './Profile'
 
 const index = () => {
   return (
-    <div className='py-10  mx-auto  space-y-12 flex justify-center sm:justify-around items-center flex-wrap  overflow-hidden'>
+    <div className='py-10  mx-auto  space-y-12 flex justify-center sm:justify-around items-center flex-wrap  overflow-hidden' id="productivity">
             
 
             {/* Profile Section */}

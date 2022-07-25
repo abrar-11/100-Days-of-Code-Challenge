@@ -13,7 +13,7 @@ const Header = () => {
             <a href="" className="hover:text-gray-600">Watch a demo</a>
         </div>
 
-        <div className="space-x-4">
+        <div className="space-x-4 hidden lg:block">
             <button className="shadow-md rounded px-7 py-3 text-xs font-medium text-gray-800 uppercase hover:shadow-lg ">
                 Log In
             </button>

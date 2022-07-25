@@ -3,7 +3,7 @@ import React from "react";
 const index = () => {
    return (
       <div className="py-10  mx-auto   flex justify-center sm:justify-around items-center flex-wrap  overflow-hidden ">
-         <h1 className="text-center text-2xl text-gray-700 font-semibold  w-full py-4">
+         <h1 className="text-center text-2xl text-gray-700 font-semibold  w-full py-4" id="pricing">
             Our Pricing Policy
          </h1>
          <div className="flex flex-col lg:flex-row wrap justify-center items-center lg:space-x-5  w-full space-y-10 lg:space-y-0">
