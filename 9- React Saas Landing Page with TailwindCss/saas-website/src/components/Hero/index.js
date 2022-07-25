@@ -18,7 +18,7 @@ const index = () => {
             </p>
 
             <Button />
-            <div className="charts relative pt-6   flex-column lg:flex-row  lg:flex space-y-6 lg:space-y-0 lg:space-x-8 "   >
+            <div className="charts relative pt-6   flex flex-col lg:flex-row  space-y-6 lg:space-y-0 lg:space-x-8 items-center overflow-hidden "   >
 
 
                {/* Our Audience Chart */}

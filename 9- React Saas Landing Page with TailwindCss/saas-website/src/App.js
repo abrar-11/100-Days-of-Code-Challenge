@@ -1,12 +1,20 @@
 import React from "react";
-import { Hero, Network, Partners, Pricing, Productivity } from "./components";
+import {
+   Hero,
+   Network,
+   Partners,
+   Pricing,
+   Productivity,
+   Faqs,
+   Footer,
+} from "./components";
 import Header from "./layouts/Header";
 
 const App = () => {
    return (
       <>
          {" "}
-         <div className="bg-gradient-to-r min-h-screen pb-60">
+         <div className="bg-gradient-to-r min-h-screen">
             <div className="container mx-auto w-9/12 max-w-6xl ">
                {/*=========  Header Section========= */}
                <Header />
@@ -15,20 +23,22 @@ const App = () => {
                <Hero />
 
                {/*=========  Partners Section========= */}
-               <Partners/>
+               <Partners />
 
-
-                {/*=========  Productivity Section========= */}
-                <Productivity/>
-
+               {/*=========  Productivity Section========= */}
+               <Productivity />
 
                {/*=========  Network Section========= */}
-                <Network/>
+               <Network />
 
                {/*=========  Network Section========= */}
-               <Pricing/>
+               <Pricing />
 
+               <Faqs/>
             </div>
+
+            {/*=========  Footer Section========= */}
+            <Footer />
          </div>
       </>
    );
