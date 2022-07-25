@@ -50,7 +50,7 @@ const employee_data = [
 
 const Employee = () => {
    return (
-      <div className=" w-72 lg:w-6/12  bg-gray-50 p-6 shadow-xl rounded-lg space-y-10 ">
+      <div className=" mt-10 md:mt-0 w-full lg:w-6/12  bg-gray-50 p-2 md:p-6 shadow-xl rounded-lg space-y-10 ">
          <div className="flex justify-between items-center">
             <h1>Employee</h1>
             <button className="shadow-md rounded px-7 py-3 text-xs font-medium bg-emerald-500  text-white uppercase hover:shadow-lg ">
@@ -60,14 +60,14 @@ const Employee = () => {
 
          <div className="overflow-x-scroll ">
             <div className="flex justify-between text-start  font-medium text-[0.75rem] mb-5 ">
-               <div className="w-4/12">Name</div>
-               <div className="w-1/12">Role</div>
-               <div className="w-4/12">Compliance</div>
+               <div className="w-6/12 md:w-4/12">Name</div>
+               <div className="w-1/12 hidden md:block">Role</div>
+               <div className="w-6/12 md:w-4/12">Compliance</div>
                <div className="w-2/12 hidden md:block">Status</div>
             </div>
 
             <div className="space-y-2">
-               {employee_data.map((emp) => {
+               {employee_data.map((emp,index) => {
                   return (
                      <ProfileCard
                         avatar={emp.avatar}
@@ -76,6 +76,7 @@ const Employee = () => {
                         color={emp.color}
                         status={emp.status}
                         per={emp.per}
+                        kery = {index}
                      />
                   );
                })}

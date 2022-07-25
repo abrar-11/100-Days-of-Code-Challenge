@@ -3,10 +3,10 @@ import React from "react";
 const index = () => {
    return (
       <div className="py-10  mx-auto   flex justify-center sm:justify-around items-center flex-wrap  overflow-hidden ">
-         <h1 className="text-center text-2xl text-gray-700 font-semibold  w-full py-4" id="pricing">
+         <h1 className="text-center text-2xl text-gray-700 font-semibold  w-full py-10 lg:py-16" id="pricing">
             Our Pricing Policy
          </h1>
-         <div className="flex flex-col lg:flex-row wrap justify-center items-center lg:space-x-5  w-full space-y-10 lg:space-y-0">
+         <div className="flex flex-col lg:flex-row wrap justify-center items-center lg:items-start lg:space-x-5  w-full space-y-10 lg:space-y-0">
 
             {/* Price Card Start */}
             <div className=" rounded-lg border border-gray-100 w-full sm:w-7/12 lg:w-4/12 ">
@@ -28,20 +28,20 @@ const index = () => {
                </div>
                <button
                   type="button"
-                  class="text-white bg-sky-500 uppercase hover:bg-sky-600 focus:ring-4 focus:outline-none  w-full focus:ring-sky-300 font-medium rounded-l-full rounded-br-full text-sm px-5 py-5 text-center inline-flex items-center group transition ease-in-out"
+                  class="text-white bg-sky-500 uppercase hover:bg-sky-600 focus:ring-4 focus:outline-none  w-full focus:ring-sky-300 font-medium text-sm px-5 py-5 text-center inline-flex items-center group transition ease-in-out"
                >
                   Get Started
                   <svg
-                     aria-hidden="true"
+                     ariaHidden="true"
                      class="ml-auto -mr-1 w-5 h-5 "
                      fill="currentColor"
                      viewBox="0 0 20 20"
                      xmlns="http://www.w3.org/2000/svg"
                   >
                      <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                      ></path>
                   </svg>
                </button>
@@ -79,20 +79,20 @@ const index = () => {
 
                <button
                   type="button"
-                  class="text-white bg-emerald-500 uppercase hover:bg-emerald-600 focus:ring-4 focus:outline-none  w-full focus:ring-emerald-300 font-medium rounded-l-full rounded-br-full text-sm px-5 py-5 text-center inline-flex items-center group transition ease-in-out "
+                  class="text-white bg-emerald-500 uppercase hover:bg-emerald-600 focus:ring-4 focus:outline-none  w-full focus:ring-emerald-300 font-medium  text-sm px-5 py-5 text-center inline-flex items-center group transition ease-in-out  z-10 "
                >
                   Get Started
                   <svg
-                     aria-hidden="true"
+                     ariaHidden="true"
                      class="ml-auto -mr-1 w-5 h-5 "
                      fill="currentColor"
                      viewBox="0 0 20 20"
                      xmlns="http://www.w3.org/2000/svg"
                   >
                      <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                      ></path>
                   </svg>
                </button>
