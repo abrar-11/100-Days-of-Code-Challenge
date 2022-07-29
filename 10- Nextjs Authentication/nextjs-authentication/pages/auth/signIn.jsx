@@ -12,6 +12,10 @@ const signin = () => {
          icon: " ",
          name: "github",
       },
+      {
+         icon: " ",
+         name: "google",
+      },
    ];
 
    const handleSignIn = (provider) => {
