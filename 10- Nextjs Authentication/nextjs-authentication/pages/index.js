@@ -1,10 +1,23 @@
-import React from 'react'
-import {useSession} from 'next-auth/react'
+import React from "react";
+import { signIn, useSession } from "next-auth/react";
 const Home = () => {
-  
-  return (
-    <div>Nextjs Authentication App</div>
-  )
-}
+   const { data: sessions } = useSession();
 
-export default Home
+   return (
+      <>
+         <div>Nextjs Authentication App</div>
+         {sessions ? (
+            <>
+               <p>You are Signed In </p>
+            </>
+         ) : (
+            <>
+               <p>You are Not Signed In </p>
+               <button onClick={signIn}>Sign In 🚀</button>
+            </>
+         )}
+      </>
+   );
+};
+
+export default Home;
