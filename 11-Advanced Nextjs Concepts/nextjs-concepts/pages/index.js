@@ -2,7 +2,28 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+
+
 export default function Home() {
+
+
+  // Env Variable 
+  console.log("Secret Variable = ",process.env.SECRET_VARIABLE)
+
+  // Browser Output ->  Secret Variable =  undefined
+  // Server Side Output -> Secret Variable =  somthing very secret
+
+
+
+   // Env Variable 
+   console.log("Nextjs Secret Variable = ",process.env.NEXT_PUBLIC_FIRST_VARIABLE)
+
+   // Browser Output ->  Nextjs Secret Variable =  Hello Nexjs (Expose on browser Console)
+   // Server Side Output -> Nextjs Secret Variable =  Hello Nexjs
+ 
+
+
+
   return (
     <div className={styles.container}>
       <Head>
