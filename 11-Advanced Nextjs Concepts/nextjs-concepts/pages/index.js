@@ -1,28 +1,36 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+
+// GET Server Side Props
 
 
+
+
+export const getServerSideProps = () => {
+  return {
+    props: {
+      title: "Server Side Props",
+      description: "The server side props for the application.",
+    },
+  };
+};
 
 export default function Home() {
-
-
-  // Env Variable 
-  console.log("Secret Variable = ",process.env.SECRET_VARIABLE)
+  // Env Variable
+  console.log("Secret Variable = ", process.env.SECRET_VARIABLE);
 
   // Browser Output ->  Secret Variable =  undefined
   // Server Side Output -> Secret Variable =  somthing very secret
 
+  // Env Variable
+  console.log(
+    "Nextjs Secret Variable = ",
+    process.env.NEXT_PUBLIC_FIRST_VARIABLE
+  );
 
-
-   // Env Variable 
-   console.log("Nextjs Secret Variable = ",process.env.NEXT_PUBLIC_FIRST_VARIABLE)
-
-   // Browser Output ->  Nextjs Secret Variable =  Hello Nexjs (Expose on browser Console)
-   // Server Side Output -> Nextjs Secret Variable =  Hello Nexjs
- 
-
-
+  // Browser Output ->  Nextjs Secret Variable =  Hello Nexjs (Expose on browser Console)
+  // Server Side Output -> Nextjs Secret Variable =  Hello Nexjs
 
   return (
     <div className={styles.container}>
@@ -38,7 +46,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -79,12 +87,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
