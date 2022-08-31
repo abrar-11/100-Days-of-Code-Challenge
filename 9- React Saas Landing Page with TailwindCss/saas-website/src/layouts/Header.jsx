@@ -56,7 +56,7 @@ const Header = () => {
          <div
             className={`${
                !isNavbar ? "hidden" : "block"
-            } w-screen md:w-80 h-screen bg-gray-100 fixed z-40 top-0 right-0 transition duration-200 ease-out flex justify-center items-center`}
+            } w-screen md:w-80 h-screen bg-dark-2 fixed z-40 top-0 right-0 transition duration-200 ease-out flex justify-center items-center lg:hidden`}
          >
             <div
                className=" lg:hidden absolute top-9 right-9 select-none cursor-pointer"
@@ -78,22 +78,22 @@ const Header = () => {
                </svg>
             </div>
 
-            <div className="space-y-8 flex flex-col   text-center  text-xs font-medium uppercase text-gray-500 ">
-               <a href="#hero" className="hover:text-gray-600" onClick={()=>setisNavbar(false)}>
+            <div className="space-y-8 flex flex-col   text-center  text-xs font-medium uppercase text-gray-50 ">
+               <a href="#hero" className="hover:text-gray-200" onClick={()=>setisNavbar(false)}>
                   Grow
                </a>
-               <a href="#productivity" className="hover:text-gray-600"  onClick={()=>setisNavbar(false)}>
+               <a href="#productivity" className="hover:text-gray-200"  onClick={()=>setisNavbar(false)}>
                   Productivity
                </a>
-               <a href="#pricing" className="hover:text-gray-600"  onClick={()=>setisNavbar(false)}>
+               <a href="#pricing" className="hover:text-gray-200"  onClick={()=>setisNavbar(false)}>
                   Pricing
                </a>
-               <a href="#contact" className="hover:text-gray-600"  onClick={()=>setisNavbar(false)}>
+               <a href="#contact" className="hover:text-gray-200"  onClick={()=>setisNavbar(false)}>
                   Contact us
                </a>
 
                <div className="space-x-4">
-                  <button className="shadow-md rounded px-7 py-3 text-xs font-medium text-gray-800 uppercase hover:shadow-lg ">
+                  <button className="shadow-md rounded px-7 py-3 text-xs font-medium text-gray-50 uppercase hover:shadow-lg ">
                      Log In
                   </button>
                   <button className="shadow-md rounded px-7 py-3 text-xs font-medium bg-emerald-500  text-white uppercase hover:shadow-lg ">

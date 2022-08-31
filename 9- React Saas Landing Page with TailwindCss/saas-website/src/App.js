@@ -15,7 +15,7 @@ const App = () => {
       <>
          {" "}
          <div className="bg-dark min-h-screen text-light">
-            <div className="container mx-auto w-9/12 max-w-6xl ">
+            <div className="container mx-auto w-[85%] md:w-9/12 max-w-6xl ">
                {/*=========  Header Section========= */}
                <Header />
 

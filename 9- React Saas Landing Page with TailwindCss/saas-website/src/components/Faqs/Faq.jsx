@@ -17,7 +17,7 @@ const Faq = ({ question, answer }) => {
                   class="px-1 py-1.5 rounded  focus:outline-none   cursor-pointer"
                   onClick={() => setisOpen(!isOpen)}
                >
-                  {isOpen ? (
+                  {!isOpen ? (
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

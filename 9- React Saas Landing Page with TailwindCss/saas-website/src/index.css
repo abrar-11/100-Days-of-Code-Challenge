@@ -7,6 +7,17 @@ html {
    scroll-behavior: smooth;
 }
 
+::-moz-selection { /* Code for Firefox */
+
+    background: transparent;
+  }
+  
+  ::selection {
+
+    background: transparent;
+  }
+
+
 .bg-dark {
    @apply bg-gradient-to-br from-[#04011d]  to-[#130f40] ;
 }
