@@ -3,21 +3,21 @@ import React from "react";
 const index = () => {
    return (
       <div className="py-10  mx-auto   flex justify-center sm:justify-around items-center flex-wrap  overflow-hidden ">
-         <h1 className="text-center text-2xl text-gray-700 font-semibold  w-full py-10 lg:py-16" id="pricing">
+         <h1 className="text-center text-3xl text-lighht font-semibold  w-full py-10 lg:py-16" id="pricing">
             Our Pricing Policy
          </h1>
          <div className="flex flex-col lg:flex-row wrap justify-center items-center lg:items-start lg:space-x-5  w-full space-y-10 lg:space-y-0">
 
             {/* Price Card Start */}
-            <div className=" rounded-lg border border-gray-100 w-full sm:w-7/12 lg:w-4/12 ">
-               <div className="p-5 border-b text-left">
-                  <p className="text-sm text-gray-500">Basic Package</p>
+            <div className=" rounded-lg border border-gray-600 w-full sm:w-7/12 lg:w-4/12 bg-dark-2">
+               <div className="p-5 border-b border-gray-600 text-left">
+                  <p className="text-md text-emerald-300">Basic Package</p>
 
-                  <p className="font-medium text-4xl text-gray-700">$29</p>
+                  <p className="font-medium text-4xl text-gray-200">$29</p>
                </div>
 
                <div className="space-y-4 my-5 p-5">
-                  <p className="text-gray-500">WHAT'S INCLUDED</p>
+                  <p className="text-gray-300 border-b-[3px] border-emerald-300 inline-block pb-1">WHAT'S INCLUDED</p>
 
                   <p className="text-sm">60 Unique Screens</p>
                   <p className="text-sm">Apps source file</p>
@@ -28,7 +28,7 @@ const index = () => {
                </div>
                <button
                   type="button"
-                  class="text-white bg-sky-500 uppercase hover:bg-sky-600 focus:ring-4 focus:outline-none  w-full focus:ring-sky-300 font-medium text-sm px-5 py-5 text-center inline-flex items-center group transition ease-in-out"
+                  class=" bg-sky-500 uppercase hover:bg-sky-600 focus:ring-4 focus:outline-none  w-full focus:ring-sky-300 font-semibold text-sm px-5 py-5 text-center inline-flex items-center group transition ease-in-out text-gray-900 "
                >
                   Get Started
                   <svg
@@ -50,15 +50,15 @@ const index = () => {
             {/* Price Card End */}
  
              {/* Price Card Start */}
-             <div className=" rounded-lg border border-gray-100 w-full sm:w-7/12 lg:w-4/12  ">
-               <div className="p-5 border-b text-left">
-                  <p className="text-sm text-gray-500">Basic Package</p>
+             <div className=" rounded-lg border border-gray-600 w-full sm:w-7/12 lg:w-4/12 bg-dark-2 shadow-xl">
+               <div className="p-5 border-b border-gray-600 text-left">
+                  <p className="text-sm  text-emerald-300">Premium Package</p>
 
-                  <p className="font-medium text-4xl text-gray-700">$29</p>
+                  <p className="font-medium text-4xl text-gray-200">$49</p>
                </div>
 
-               <div className="space-y-4 my-5 p-5 border-b ">
-                  <p className="text-gray-500">WHAT'S INCLUDED</p>
+               <div className="space-y-4 my-5 p-5 border-b border-gray-600">
+               <p className="text-gray-300 border-b-[3px] border-emerald-300 inline-block pb-1">WHAT'S INCLUDED</p>
 
                   <p className="text-sm">60 Unique Screens</p>
                   <p className="text-sm">Apps source file</p>
@@ -79,7 +79,7 @@ const index = () => {
 
                <button
                   type="button"
-                  class="text-white bg-emerald-500 uppercase hover:bg-emerald-600 focus:ring-4 focus:outline-none  w-full focus:ring-emerald-300 font-medium  text-sm px-5 py-5 text-center inline-flex items-center group transition ease-in-out  z-10 "
+                  class="text-gray-900  bg-emerald-500 uppercase hover:bg-emerald-600 focus:ring-4 focus:outline-none  w-full focus:ring-emerald-300 font-semibold  text-sm px-5 py-5 text-center inline-flex items-center group transition ease-in-out  z-10 "
                >
                   Get Started
                   <svg

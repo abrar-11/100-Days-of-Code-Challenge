@@ -14,7 +14,7 @@ const App = () => {
    return (
       <>
          {" "}
-         <div className="bg-gradient-to-r min-h-screen">
+         <div className="bg-dark min-h-screen text-light">
             <div className="container mx-auto w-9/12 max-w-6xl ">
                {/*=========  Header Section========= */}
                <Header />

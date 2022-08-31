@@ -3,13 +3,13 @@ import logo from "../../assets/logo.svg";
 const index = () => {
    return (
       <>
-         <footer class="md:py-16 bg-white py-14 dark:bg-gray-900  mt-5" id="contact">
+         <footer class="md:py-16 py-14 bg-dark-2  mt-5" id="contact">
             <div className="container mx-auto w-9/12 max-w-6xl">
                <div className="py-28 text-center">
                   <h1 className="w-full text-center text-white text-3xl mb-6  md:text-4xl">
                      People who are ready took <br/> these courses!
                   </h1>
-                  <button className="shadow-md rounded px-7 py-3 text-xs font-medium bg-emerald-500  text-white uppercase hover:shadow-lg ">
+                  <button className="shadow-md rounded px-7 py-3 text-sm bg-emerald-500  text-slate-900 uppercase font-bold hover:shadow-lg ">
                      Schedule demo
                   </button>
                </div>

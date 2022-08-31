@@ -1,12 +1,12 @@
 import React from "react";
-import avatar2 from "../../assets/employee-avatar-2.svg";
+import avatar2 from "../../assets/employee-avatar-2.png";
 
 import { ChatIcon, HeartIcon, LightningBoltIcon, StatusOnlineIcon } from '@heroicons/react/outline'
 
 const Profile = () => {
    return (
       <div className="w-full lg:w-6/12  flex-column md:flex-row md:flex md:justify-between md:items-center md:h-96 md:space-x-5 space-y-4">
-         <div className=" md:w-6/12 shadow-sm md:shadow-md rounded-md h-5/6 p-10 bg-white  flex-column items-center justify-center space-y-4">
+         <div className=" md:w-6/12 shadow-md md:shadow-lg rounded-md h-5/6 p-10 bg-dark-2  flex-column items-center justify-center space-y-4">
             <div class="relative  h-16 ">
             
                <img
@@ -38,20 +38,20 @@ const Profile = () => {
          </div>
 
          <div className=" md:w-6/12 h-full flex-column justify-evenly space-y-5">
-            <div className="p-4  bg-white shadow-sm md:shadow-md rounded flex items-center"> 
+            <div className="p-4  bg-dark-2 shadow-md md:shadow-lg rounded flex items-center"> 
                <div className="w-14">
                   <LightningBoltIcon className="w-10 h-10 mr-3  text-emerald-500 bg-emerald-100 rounded-full p-2"/>
                </div>
 
                <div className=" space-y-2">
-                  <p className="text-[0.8rem] text-gray-600">
+                  <p className="text-[0.8rem] text-gray-200">
                      An email bounced back to ($94.00) Amy Sanders
                   </p>
 
-                  <p className="text-blue-700 text-xs ">Update Email Here</p>
+                  <p className="text-blue-400 text-xs ">Update Email Here</p>
                </div>
             </div>
-            <div className="p-10 bg-white shadow-sm md:shadow-md rounded h-4/6 md:w-48">
+            <div className="p-10 bg-dark-2  shadow-md md:shadow-lg rounded h-4/6 md:w-48">
                <div class="relative  h-16 ">
                <StatusOnlineIcon className="w-14 h-14 mx-auto text-orange-500 bg-orange-100 rounded-full p-2" />
                </div>

@@ -4,7 +4,7 @@ const Section = ({btn, title, desc, btn2 }) => {
 
    return (
       <div className="lg:w-5/12 space-y-10  lg:pb-10">
-         <button className="bg-emerald-100 text-emerald-800 px-4 py-2 rounded shadow shadow-emerald-200 ">
+         <button className="bg-emerald-300 text-emerald-900 px-4 py-2 rounded  shadow-lg ">
             {btn}
          </button>
 

@@ -2,19 +2,22 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-// GET Server Side Props
+// * GET Server Side Props
 
+// export const getServerSideProps = async (context) => {
+//   console.log(context);
 
+//   const response = await fetch("https://api.quotable.io/random");
+//   const quotes = await response.json();
 
+//   console.log(quotes);
 
-export const getServerSideProps = () => {
-  return {
-    props: {
-      title: "Server Side Props",
-      description: "The server side props for the application.",
-    },
-  };
-};
+//   return {
+//     props: {
+//       quotes
+//     },
+//   };
+// };
 
 export default function Home() {
   // Env Variable
@@ -24,6 +27,7 @@ export default function Home() {
   // Server Side Output -> Secret Variable =  somthing very secret
 
   // Env Variable
+
   console.log(
     "Nextjs Secret Variable = ",
     process.env.NEXT_PUBLIC_FIRST_VARIABLE
@@ -31,6 +35,10 @@ export default function Home() {
 
   // Browser Output ->  Nextjs Secret Variable =  Hello Nexjs (Expose on browser Console)
   // Server Side Output -> Nextjs Secret Variable =  Hello Nexjs
+
+  // *Server Side Props
+  // console.log(`Title : ${props.title}  and Description : ${props.description}`);
+  // console.log(quotes)
 
   return (
     <div className={styles.container}>
@@ -52,32 +60,14 @@ export default function Home() {
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <h2>{/*quotes.content*/}</h2>
+            <p>{/*quotes.author*/}</p>
           </a>
+      
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+       
+        
+          
         </div>
       </main>
 

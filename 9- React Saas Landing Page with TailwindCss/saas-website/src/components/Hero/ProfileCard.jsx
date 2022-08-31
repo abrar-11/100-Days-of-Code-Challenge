@@ -11,7 +11,7 @@ const ProfileCard = ({avatar,name,role,color,status,per}) => {
     let bg_color = colorsClasses[color]
    return (
       <>
-         <div className="flex justify-between text-start text-xs  p-3 rounded shadow items-center">
+         <div className="flex justify-between text-start text-xs  p-3 rounded shadow items-center bg-dark-2 ">
             <div className="w-6/12 md:w-4/12 flex items-center">
                <img
                   class="w-6 h-6 rounded-full"

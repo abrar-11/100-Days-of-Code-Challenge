@@ -6,29 +6,29 @@ const Header = () => {
       <div className="flex items-center justify-between py-5">
          <div className="logo flex items-center space-x-3">
             <img src={logo} alt="" />{" "}
-            <span className="font-bold  text-gray-800">TECHIYON</span>
+            <span className="font-bold  text-light">TECHIYON</span>
          </div>
 
-         <div className="space-x-8 flex-grow text-center  text-xs font-medium uppercase text-gray-500 hidden lg:block">
-            <a href="#hero" className="hover:text-gray-600">
+         <div className="space-x-8 flex-grow text-center  text-xs font-medium uppercase text-gray-100 hidden lg:block">
+            <a href="#hero" className="hover:text-gray-200">
                Grow
             </a>
-            <a href="#productivity" className="hover:text-gray-600">
+            <a href="#productivity" className="hover:text-gray-200">
                Productivity
             </a>
-            <a href="#pricing" className="hover:text-gray-600">
+            <a href="#pricing" className="hover:text-gray-200">
                Pricing
             </a>
-            <a href="#contact" className="hover:text-gray-600">
+            <a href="#contact" className="hover:text-gray-200">
                Contact us
             </a>
          </div>
 
          <div className="space-x-4 hidden lg:block">
-            <button className="shadow-md rounded px-7 py-3 text-xs font-medium text-gray-800 uppercase hover:shadow-lg ">
+            <button className="shadow-md rounded px-7 py-3 text-xs font-medium text-gray-100 uppercase hover:shadow-lg bg-dark-2">
                Log In
             </button>
-            <button className="shadow-md rounded px-7 py-3 text-xs font-medium bg-emerald-500  text-white uppercase hover:shadow-lg ">
+            <button className="shadow-md rounded px-7 py-3 text-xs font-semibold bg-emerald-500  text-gray-800  uppercase hover:shadow-lg ">
                Sign up
             </button>
          </div>

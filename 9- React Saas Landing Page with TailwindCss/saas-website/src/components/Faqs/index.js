@@ -35,10 +35,10 @@ const index = () => {
          <div className="">
             <div>
                <div class="relative flex flex-col items-center justify-center sm:px-0  pb-32">
-                  <div class="md:py-36 py-10">
+                  <div class="md:py-20 py-10">
                      <h1
                         role="heading"
-                        class="xl:text-6xl md:text-5xl text-xl font-medium leading-10 text-gray-600 text-center" 
+                        class="xl:text-5xl md:text-5xl text-xl font-medium leading-10 text-light text-center" 
                      >
                         Frequently Asked Questions
                      </h1>

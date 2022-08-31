@@ -1,8 +1,8 @@
 import React from "react";
-import avatar1 from "../../assets/employee-avatar-1.svg";
-import avatar2 from "../../assets/employee-avatar-2.svg";
-import avatar3 from "../../assets/employee-avatar-3.svg";
-import avatar4 from "../../assets/employee-avatar-4.svg";
+import avatar1 from "../../assets/employee-avatar-1.png";
+import avatar2 from "../../assets/employee-avatar-2.png";
+import avatar3 from "../../assets/employee-avatar-3.png";
+import avatar4 from "../../assets/employee-avatar-4.png";
 import ProfileCard from "./ProfileCard";
 
 const employee_data = [
@@ -50,7 +50,7 @@ const employee_data = [
 
 const Employee = () => {
    return (
-      <div className=" mt-10 md:mt-0 w-full lg:w-6/12  bg-gray-50 p-2 md:p-6 shadow-xl rounded-lg space-y-10 ">
+      <div className=" mt-10 md:mt-0 w-full lg:w-6/12  bg-dark-2 p-2 md:p-6 shadow-xl rounded-lg space-y-10 hide_scrollbar">
          <div className="flex justify-between items-center">
             <h1>Employee</h1>
             <button className="shadow-md rounded px-7 py-3 text-xs font-medium bg-emerald-500  text-white uppercase hover:shadow-lg ">
@@ -58,7 +58,7 @@ const Employee = () => {
             </button>
          </div>
 
-         <div className="overflow-x-scroll ">
+         <div className="overflow-x-scroll hide_scrollbar">
             <div className="flex justify-between text-start  font-medium text-[0.75rem] mb-5 ">
                <div className="w-6/12 md:w-4/12">Name</div>
                <div className="w-1/12 hidden md:block">Role</div>
